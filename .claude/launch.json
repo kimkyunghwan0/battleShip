@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "battleship",
+      "runtimeExecutable": "C:\\Users\\indi\\IdeaProjects\\battleShip\\gradlew.bat",
+      "runtimeArgs": ["bootRun", "-p", "C:\\Users\\indi\\IdeaProjects\\battleShip", "--args=--server.port=8090"],
+      "port": 8090
+    }
+  ]
+}

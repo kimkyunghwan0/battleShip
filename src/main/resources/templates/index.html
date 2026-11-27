@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>배틀쉽</title>
+    <link rel="stylesheet" th:href="@{/css/game.css}">
+</head>
+<body>
+<header>
+    <h1>⚓ 배틀쉽</h1>
+    <p id="status">함선을 배치하세요.</p>
+</header>
+
+<section id="setup" class="panel">
+    <div class="toolbar">
+        <button id="rotate" type="button">회전 (R)</button>
+        <button id="random" type="button">랜덤 배치</button>
+        <button id="reset" type="button">초기화</button>
+        <button id="start" type="button" class="primary" disabled>게임 시작</button>
+    </div>
+    <ul id="dock"></ul>
+</section>
+
+<main>
+    <div class="board-wrap">
+        <h2>내 함대</h2>
+        <div id="myBoard" class="board"></div>
+    </div>
+    <div class="board-wrap" id="enemyWrap" hidden>
+        <h2>적 해역 <small>(칸을 눌러 발사)</small></h2>
+        <div id="enemyBoard" class="board"></div>
+    </div>
+</main>
+
+<div id="result" class="panel" hidden>
+    <strong id="resultText"></strong>
+    <button id="again" type="button" class="primary">다시 하기</button>
+</div>
+
+<script th:src="@{/js/game.js}"></script>
+</body>
+</html>
